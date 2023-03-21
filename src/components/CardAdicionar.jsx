@@ -1,6 +1,9 @@
 import { useState } from "react";
 
-function CardAdicionar() { 
+
+function CardAdicionar({adicionarTarefa}){
+
+
 
     const [texto, setTexto] = useState('')
 
@@ -25,10 +28,16 @@ function CardAdicionar() {
                 }}
                 >Adicionar Tarefa
              </button>
+             <p>{
+                    texto}
+            </p>
 
         </div>
 
     )
 
 }
+
+
+
 export default CardAdicionar
