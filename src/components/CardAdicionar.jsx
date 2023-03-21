@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function CardAdicionar() { 
 
-    const [tarefa, setTarefa] = useState('')
+    const [texto, setTexto] = useState('')
 
 
     return(
@@ -12,16 +12,16 @@ function CardAdicionar() {
             <input 
                 type="text" 
                 placeholder="Adicionar tarefa" 
-                value={tarefa}
-                onChange={(e) => setTarefa(e.target.value)}
+                value={texto}
+                onChange={(e) => setTexto(e.target.value)}
                 
                 />
             <button
                 onClick={() => {
 
-                    console.log(tarefa)
-                    setTarefa('')
-                    
+                    console.log(texto)
+                    setTexto('')
+
                 }}
                 >Adicionar Tarefa
              </button>
