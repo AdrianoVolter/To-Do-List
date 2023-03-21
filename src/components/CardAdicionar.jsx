@@ -17,6 +17,7 @@ function CardAdicionar({adicionarTarefa}) {
     return (
         <div>
         <input
+            className="input m-3"
             type="text"
             value={tarefa}
             onChange={(e) => setTarefa(e.target.value)}

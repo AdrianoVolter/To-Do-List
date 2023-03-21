@@ -4,7 +4,7 @@ import CardAdicionar from './components/CardAdicionar'
 
 function App() {
   const [listaDeTarefas, setListaDeTarefas] = useState([
-    {id: 1, texto: "Tarefa 1", finalizado: false}
+    { id: 1, texto: "Tarefa 1", finalizado: false }
   ])
 
   function adicionarTarefa(texto) {
@@ -15,18 +15,28 @@ function App() {
     }
     setListaDeTarefas([...listaDeTarefas, novaTarefa])
   }
-  
+
   return (
-    <div className="App">
-      <CardAdicionar 
-        adicionarTarefa={adicionarTarefa}
-        
-      />
-      {
+    <div className='row container bg-danger'>
+      <div className='form-control  bg-primary'>
+        <CardAdicionar 
+          className='form-control'
+          adicionarTarefa={adicionarTarefa} />
+      </div>
+      
+       
+
+     <div className=''>
+      <ol>
+         { 
         listaDeTarefas.map(tarefa => (
           <li key={tarefa.id}>{tarefa.texto}</li>
         ))
       }
+      </ol>
+      
+     </div>
+     
     </div>
   )
 }
