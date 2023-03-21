@@ -1,43 +1,32 @@
 import { useState } from "react";
 
 
-function CardAdicionar({adicionarTarefa}){
+function CardAdicionar({adicionarTarefa}) {
 
 
 
-    const [texto, setTexto] = useState('')
-
-
-    return(
-
-        <div className="card">
-
-            <input 
-                type="text" 
-                placeholder="Adicionar tarefa" 
-                value={texto}
-                onChange={(e) => setTexto(e.target.value)}
-                
-                />
-            <button
-                onClick={() => {
-
-                    console.log(texto)
-                    setTexto('')
-
-                }}
-                >Adicionar Tarefa
-             </button>
-             <p>{
-                    texto}
-            </p>
-
+    const [tarefa, setTarefa] = useState("");
+    
+    function handleAdicionar(event) {
+        event.preventDefault();
+        if(tarefa != "") {
+            adicionarTarefa(tarefa);
+            setTarefa("");
+        }
+    }    
+    return (
+        <div>
+        <input
+            type="text"
+            value={tarefa}
+            onChange={(e) => setTarefa(e.target.value)}
+        />
+        <button  
+            onClick={handleAdicionar}>
+                Adicionar
+            </button>
+    
         </div>
-
-    )
-
-}
-
-
-
-export default CardAdicionar
+    );
+    }   
+    export default CardAdicionar;
