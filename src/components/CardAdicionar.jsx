@@ -17,12 +17,14 @@ function CardAdicionar({adicionarTarefa}) {
     return (
         <div>
         <input
+            placeholder="Digite a tarefa"
             className="input m-3"
             type="text"
             value={tarefa}
             onChange={(e) => setTarefa(e.target.value)}
         />
-        <button  
+        <button
+            className="btn btn-info m-3"  
             onClick={handleAdicionar}>
                 Adicionar
             </button>
