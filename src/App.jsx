@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import './App.css'
 import CardAdicionar from './components/CardAdicionar'
+import ListItem from './components/ListItem'
 
 //função principal
 function App() {
@@ -29,13 +30,12 @@ function App() {
           adicionarTarefa={adicionarTarefa} />
       </div>
      <div className='form-control bg-secondary'>
-        <ol>
-          { 
-          listaDeTarefas.map(tarefa => (
-            <li key={tarefa.id}>{tarefa.texto}</li>
-          ))
-        }
+        <ol className='list-group'>
+          {listaDeTarefas.map((tarefa) => (
+            <ListItem key={tarefa.id} tarefa={tarefa} />
+          ))}
         </ol>
+
      </div>
      
     </div>
