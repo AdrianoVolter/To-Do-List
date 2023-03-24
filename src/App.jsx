@@ -20,6 +20,14 @@ function App() {
     setListaDeTarefas([...listaDeTarefas, novaTarefa])
   }
 
+//função para remover tarefa
+  function removerTarefa(remover) {
+    const novaLista = listaDeTarefas.filter((tarefa) => tarefa.id !== remover)
+    setListaDeTarefas(novaLista)
+  }
+
+
+
 //return
   return (
     <div className='row container'>
@@ -32,7 +40,11 @@ function App() {
      <div className='form-control bg-secondary'>
         <ol className='list-group'>
           {listaDeTarefas.map((tarefa) => (
-            <ListItem key={tarefa.id} tarefa={tarefa} />
+            <ListItem 
+              key={tarefa.id} 
+              tarefa={tarefa} 
+              removerTarefa={removerTarefa}
+              />
           ))}
         </ol>
 

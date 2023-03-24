@@ -5,7 +5,7 @@
 import { useState } from "react";
 
 //função principal
-function ListItem({tarefa}) {
+function ListItem({tarefa, removerTarefa}) {
 
 //useState
     const [finalizado, setFinalizado] = useState(false);
@@ -18,7 +18,13 @@ function ListItem({tarefa}) {
 //return
     return (
         <div>
-            <li className={finalizado ? "finalizado" : ""} onClick={handleFinalizado}>{tarefa.texto}</li>
+            <li 
+                className={finalizado ? "finalizado" : ""} 
+                onClick={handleFinalizado}>{tarefa.texto}
+                <button className="btn btn-danger" onClick={() => removerTarefa(tarefa.id)}>Remover</button>
+                </li>
+            
+            
         </div>
     );
 }
