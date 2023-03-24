@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import CardAdicionar from './components/CardAdicionar'
 import ListItem from './components/ListItem'
+import Proptypes from 'prop-types'
 
 //função principal
 function App() {
@@ -54,5 +55,12 @@ function App() {
   )
 }
 
+
+//propTypes
+App.propTypes = {
+  listaDeTarefas: Proptypes.array.isRequired,
+  adicionarTarefa: Proptypes.func.isRequired,
+  removerTarefa: Proptypes.func.isRequired
+}
 //exportação
 export default App

@@ -1,5 +1,6 @@
 // Description: Componente responsável por adicionar uma nova tarefa
 import { useState } from "react";
+import Proptypes from "prop-types";
 
 //função principal
 function CardAdicionar({adicionarTarefa}) {
@@ -36,6 +37,10 @@ function CardAdicionar({adicionarTarefa}) {
         </div>
     );
     }  
-    
+
+//propTypes
+CardAdicionar.propTypes = {
+    adicionarTarefa: Proptypes.func.isRequired
+}
     //exportação     
  export default CardAdicionar;

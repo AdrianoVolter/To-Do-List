@@ -3,6 +3,7 @@
 
 //importações
 import { useState } from "react";
+import Proptypes from "prop-types";
 
 //função principal
 function ListItem({tarefa, removerTarefa}) {
@@ -29,5 +30,10 @@ function ListItem({tarefa, removerTarefa}) {
     );
 }
 
+//propTypes
+ListItem.propTypes = {
+    tarefa: Proptypes.object.isRequired,
+    removerTarefa: Proptypes.func.isRequired
+}
 //exportação
 export default ListItem;
