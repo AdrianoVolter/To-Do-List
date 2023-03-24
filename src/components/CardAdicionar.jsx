@@ -19,7 +19,7 @@ function CardAdicionar({adicionarTarefa}) {
     
     //return
     return (
-        <div>
+        <div className="adicionar">
         <input
             placeholder="Digite a tarefa"
             className="input m-3"
