@@ -1,19 +1,23 @@
+// Description: Componente responsável por adicionar uma nova tarefa
 import { useState } from "react";
 
-
+//função principal
 function CardAdicionar({adicionarTarefa}) {
 
 
-
+//useState
     const [tarefa, setTarefa] = useState("");
     
+    //função para adicionar tarefa
     function handleAdicionar(event) {
         event.preventDefault();
         if(tarefa != "") {
             adicionarTarefa(tarefa);
             setTarefa("");
         }
-    }    
+    }  
+    
+    //return
     return (
         <div>
         <input
@@ -31,5 +35,7 @@ function CardAdicionar({adicionarTarefa}) {
     
         </div>
     );
-    }   
-    export default CardAdicionar;
+    }  
+    
+    //exportação     
+ export default CardAdicionar;
