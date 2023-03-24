@@ -37,8 +37,6 @@ function App() {
         <CardAdicionar 
           className='form-control'
           adicionarTarefa={adicionarTarefa} />
-      </div>
-     <div className='form-control bg-secondary'>
         <ol className='list-group'>
           {listaDeTarefas.map((tarefa) => (
             <ListItem 
@@ -48,9 +46,7 @@ function App() {
               />
           ))}
         </ol>
-
      </div>
-     
     </div>
   )
 }
