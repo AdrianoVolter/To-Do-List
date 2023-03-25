@@ -29,7 +29,7 @@ function CardAdicionar({adicionarTarefa}) {
             onChange={(e) => setTarefa(e.target.value)}
         />
         <button
-            className="btn btn-info m-3"  
+            className="btn btn-warning m-3 "  
             onClick={handleAdicionar}>
                 Adicionar
             </button>
