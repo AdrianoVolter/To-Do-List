@@ -30,6 +30,9 @@ function ListItem({tarefa, removerTarefa, handleFinalizado}) {
                {finalizado ? `- FINALIZADO -`: <button className="btn btn-warning" onClick={() => handleFinalizado(tarefa.id)}>Finalizar</button>
                
                }
+               {
+                     finalizado ? <button className="btn btn-light" onClick={() => handleFinalizado(tarefa.id)}>Desfazer</button> : ""
+               }
             </li>
             
             
