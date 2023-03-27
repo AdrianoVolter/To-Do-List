@@ -52,6 +52,7 @@ li{
   margin-left: 30px;
   color: rgb(7, 7, 7);
   font-size: 18px;
+  color: white;
 }
 
 /* Alinhar o botão no final da div*/
@@ -76,15 +77,16 @@ li button:hover{
 }
 /* Diminuir form e manter itens dentro*/
  .form-control{
-  width: 400px;
+  width: 600px;
   margin: 0 auto;
   padding: 0;
   color: rgb(7, 7, 7);
 }
 
 .form-control input{
+  width: 230px;
   align-items: center;
-  width: 200px;
+ 
  
   padding: 12px;
   border-radius: 10px;

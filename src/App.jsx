@@ -27,6 +27,11 @@ function App() {
     setListaDeTarefas(novaLista)
   }
 
+//função para marcar como finalizado
+  function handleFinalizado() {
+    setFinalizado(!finalizado)
+  }
+
 
 
 //return
@@ -43,6 +48,7 @@ function App() {
               key={tarefa.id} 
               tarefa={tarefa} 
               removerTarefa={removerTarefa}
+              handleFinalizado={handleFinalizado}
               />
           ))}
         </ol>
